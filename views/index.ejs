@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Forecast</title>
+</head>
+<body>
+  <div class="title">
+    <h2>東京の天気予報</h2>
+  </div>
+  <div class="table">
+    <table>
+      <thead>
+        <th>日付</th>
+        <th>天気</th>
+        <th>最高気温</th>
+        <th>最低気温</th>
+        <th>風速</th>
+      </thead>
+      <tbody>
+        <% for (let i = 0; i < data.length; i++) { %>
+          <tr>
+            <td><%= data[i].date %></td>
+            <td><%= data[i].weather %></td>
+            <td><%= data[i].maxTemp %></td>
+            <td><%= data[i].minTemp %></td>
+            <td><%= data[i].windSpeed %></td>
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
+
+<style>
+  .title {
+    text-align: center;
+  }
+  .table {
+    width: 80%;
+    margin: 0 auto;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: center;
+  }
+  td {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: center;
+  }
+</style>
