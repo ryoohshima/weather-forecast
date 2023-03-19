@@ -40,6 +40,11 @@ router.get('/', async(req, res) => {
     }
   }
 
+  // データを日付順に並び替え
+  params.data.sort((a, b) => {
+    return a.date > b.date ? 1 : -1;
+  });
+
   // レンダリング
   res.render('../views/index.ejs', params);
 });
