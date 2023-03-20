@@ -17,3 +17,6 @@
     ├── 404.ejs
     └── index.ejs
 ```
+
+## デプロイ
+Render.com
